@@ -1,0 +1,233 @@
+--------------------------------------------------------------------------------------------------------------------------------------------              
+                          Practicando Bucles + Arreglos                            
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+1.-
+
+var h = [2,4,6,8,10];
+for (var i = 0; i < h.length; i++) {
+    console.log(i);
+    console.log(h[i]);
+}
+
+
+    variable          valor	     console
+________________|_______________     _______  
+	i	|	0		0
+	   h	|	   2		2
+	i	|	1		1
+	   h	|	   4		4
+	i	|	2		2
+	   h	|	   6		6
+	i	|	3		3
+	   h	|	   8		8
+	i	|	4		4
+	   h	|	   10		10
+
+-la condicion 'for' solo se cumple para la variable 'i', siendo menor a 5, osea del 1 al 4, partiendo de la posicion 0 en forma ascendente
+-la variable 'h' e 'i 'muestran el valor de cada posicion
+
+salida: 0
+	2
+	1
+	4
+	2
+	6
+	3
+	8
+	4
+	10
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+2.-
+
+var j = [2,4,6,8,10];
+for (var k = j.length - 1; k > 0; k--) {
+    console.log(k);
+    console.log(j[k]);
+}
+
+    variable           valor	     console
+________________|_______________     _______  
+	k	|	4		4
+	  j	|	  10		10
+	k	|	3		3
+	  j	|	  8		8
+	k	|	2		2
+	  j	|	  6		6
+	k	|	1		1
+	  j	|	  4		4
+					
+-la condicion 'for' solo se cumple para la variable 'k' e inicia en la posicion 4(10), en forma descendente hasta la posicion 1(4)
+-la variable 'j[k]' y 'k' muestran sus valores de forma descendente
+
+salida: 4
+	10
+	3
+	8
+	2
+	6
+	1
+	4
+	 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3.-
+
+var m = [2,4,6,8,10];
+for (var n = 0; n < m.length; n += 2) {
+    console.log(n);
+    console.log(m[n]);
+}
+
+    variable           valor	     console
+________________|_______________     _______  
+	n	|	0		0
+	  m	|	  2		2
+	n	|	2		2
+	  m	|	  6		6
+	n	|	4		4
+	  m	|	  10		10
+							 							
+-la condicion 'for' solo se cumple para la variable 'n' e inicia en la posicion 0(2), saltandose cada dos posiciones hasta la posicion 4(10)
+-la variable 'm[n]' muestra el valor de cada dos posiciones de 'm'	 
+
+salida: 0
+	2
+	2
+	6
+	4
+	10
+		
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4.-
+
+var p = [-1,0,5,-3,2];
+for (var q = 0; q < p.length; q++) {
+    if (p[q] < 0) {
+        p[q] = "Dojo";
+    }
+}
+console.log(p);
+
+    variable           valor	     console
+________________|_______________     _______  
+	  p[q]	|         'Dojo'     'Dojo'
+        p   	|	0		0
+	p	|	5		5
+	  p[q]	|	  'Dojo'     'Dojo'
+	p	|	2		2
+	  		  		
+-la condicion 'for' solo se cumple para la variable 'q' e inicia en la posicion 0(-1), eligiendo valores negativos (p[q] < 0)
+-la variable 'p[q]' muestra el valor 'Dojo'de cada posicion 'p' negativa (0 y 3), en las demas mostrara el valor numerico de 'p'
+
+salida: [ 'Dojo', 0, 5, 'Dojo', 2 ]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+5.-
+
+var r = [-1,0,5,-3,2];
+for (var s = 0; s < r.length; s++) {
+    if (r[s] > 0) {
+        r[s] = r[s] * r[s];
+    }
+}
+console.log(r);
+
+    variable           valor	     console
+________________|_______________     _______  
+	r	|      -1             -1
+	r	|	0	       0
+	  r[s]	|	  25		 25
+	r	|      -3             -3
+	  r[s]	|	   4		  4
+
+-la condicion 'for' solo se cumple para la variable 's', eligiendo valores positivos (r[s] > 0)
+-la variable 'r[s]' muestra el valor de cada posicion positiva mayores que 0 y las multiplica(5 y 2), en las demas mostrara el valor numerico negativo
+
+salida: [ -1, 0, 25, -3, 4 ]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+6.-
+
+var t = [];
+for (var u = 0; u < 4; u++) {
+    t.push(u);
+}
+console.log(t);
+
+    variable           valor	     console
+________________|_______________     _______  
+	u	|      0             
+	   t	|         [0]         ... 0
+	u	|      1		 
+	   t	|         [0,1]       ... 1
+	u	|      2		
+	   t	|         [0,1,2]     ... 2
+	u	|      3              
+	   t	|         [0,1,2,3]   ... 3
+			 		
+-la condicion 'for' solo se cumple para la variable 'u', eligiendo valores menores a 4 en forma ascendente
+-usando el metodo push, mostramos los valores de 'u' en la variable 't'
+
+salida: [ 0, 1, 2, 3 ]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+7.-
+
+var v = [1,2,3,4,5];
+for (var w = 0; w < v.length; w++) {
+    v.pop();
+}
+console.log(v);
+
+    variable           valor	       console
+________________|_______________       _______  
+	w	|     0                 
+	   v	|         [1,2,3,4,5]	
+	w	|     1		 		
+	   v	|	  [1,2,3,4]
+	w	|     2
+	   v	|	  [1,2,3]
+	w	|     3
+	   v	|	  [1,2]         1,2
+	w	|     4
+		|
+	             
+
+-la condicion 'for' solo se cumple para la variable 'w', eligiendo valores menores a 4
+-pop elimina el ultimo elemento en cada pasada
+
+salida: [ 1, 2 ]
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
